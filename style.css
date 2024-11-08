@@ -156,10 +156,25 @@ footer {
     margin-top: 2em;
 }
 
+footer .contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.4em;
+}
+
 footer .contact a {
     color: #fff;
     margin: 0 0.5em;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+footer .contact a img{
+    width: 1.3em;
+    display: flex;
+    margin-right: 0.4em;
 }
 
 footer p{
