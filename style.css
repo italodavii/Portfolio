@@ -107,12 +107,12 @@ nav a {
 
 .project-description {
     overflow: hidden;
-    max-height: 3em; /* Mostra apenas a descrição curta */
-    transition: max-height 0.4s ease; /* Animação de expansão */
+    max-height: 3em; 
+    transition: max-height 0.4s ease; 
 }
 
 .project-card.expanded .project-description {
-    max-height: 10em; /* Expande para mostrar a descrição completa */
+    max-height: 10em; 
 }
 
 .project-card:hover {
@@ -163,14 +163,14 @@ nav a {
 
 /* Estilo do modal */
 .modal {
-    display: none; /* Oculto por padrão */
+    display: none; 
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    background-color: rgba(0, 0, 0, 0.5); 
     align-items: center;
     justify-content: center;
 }
