@@ -102,11 +102,22 @@ nav a {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 250px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;   
+}
+
+.project-description {
+    overflow: hidden;
+    max-height: 3em; /* Mostra apenas a descrição curta */
+    transition: max-height 0.4s ease; /* Animação de expansão */
+}
+
+.project-card.expanded .project-description {
+    max-height: 10em; /* Expande para mostrar a descrição completa */
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .project-card img {
@@ -120,6 +131,7 @@ nav a {
     margin: 1em 0 0.5em;
     text-align: center;
     color: #1e3a8a;
+    transition: color 0.3s;
 }
 
 .project-card p {
@@ -127,6 +139,85 @@ nav a {
     color: #666;
     text-align: center;
 }
+
+.project-description .more-text {
+    display: none; 
+}
+
+.show-more-btn {
+    background: none;       
+    border: none;           
+    color: #1e3a8a;         
+    text-decoration: underline;  
+    cursor: pointer;
+    font-size: 0.9em;
+    padding: 0;
+    margin: 0 auto 1em;
+    display: block;
+    text-align:center;
+}
+
+.show-more-btn:hover {
+    color: #3b82f6;         
+}
+
+/* Estilo do modal */
+.modal {
+    display: none; /* Oculto por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.modal-page-link {
+    display: inline-block;
+    padding: 0.8em 1.2em;
+    background-color: #4f46e5;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 1em;
+}
+
+.modal-page-link:hover {
+    background-color: #3f3ad1;
+}
+
 
 .project-card a {
     display: block;
@@ -137,15 +228,12 @@ nav a {
     text-align: center;
     transition: background 0.3s;
     border-radius: 0 0 8px 8px;
-    position: relative;
-    bottom: 0px;
 }
 
 .project-card a:hover {
     background-color: #3f3ad1;
+
 }
-
-
 /*---------- Footer ---------*/
 footer {
     width: 100%;
