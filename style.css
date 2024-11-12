@@ -78,6 +78,32 @@ nav a {
     border-radius: 10px;
 }
 
+.soft h3{
+    margin: 1em 0 0.5em 0;
+}
+
+.soft ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+    list-style-type: none; 
+    padding: 0; 
+
+}
+  
+  .soft li {
+    flex: 1 1 calc(50% - 10px); 
+    margin: 0;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+
+  .soft li img{
+    width: 2em;
+    margin-right: 0.4em;
+  }
+
 
 
 /*------------- Projects --------------*/
