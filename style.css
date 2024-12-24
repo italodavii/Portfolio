@@ -133,7 +133,7 @@ nav a {
 
 .project-description {
     overflow: hidden;
-    max-height: 3em; 
+    max-height: 3.8em; 
     transition: max-height 0.4s ease; 
 }
 
