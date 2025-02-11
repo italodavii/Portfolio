@@ -39,11 +39,16 @@ nav{
 }
 
 nav a {
-    color: #fff;
+    color: #1e3a8a;
+    background-color: #fff;
     text-decoration: none;
     margin: 0 1em;
-    font-weight: bold;
+    font-weight: 500;
+    border: 0.1em solid #fff;
+    padding: 0.2em 0.8em;
+    border-radius: 1em;
 }
+
 
 .container {
     display: flex;
@@ -283,6 +288,7 @@ footer p{
     margin: 0.5em;
 }
 
+
 @media (max-width: 550px) {
     .about-section {
         flex-direction: column-reverse;
@@ -299,12 +305,33 @@ footer p{
         border-radius: 10px;
     }
 
-    header h1 {
-        font-size: 2em;
-        line-height: 0.8;
-    }
-
     header h1 span {
         margin-top: 0;
     }
 }
+
+@media (max-width: 572px) {
+    header h1 {
+        font-size: 2em;
+        line-height: 0.8;
+        margin-bottom: 0.7em;
+    }
+
+}
+
+@media (max-width: 405px) {
+    nav a {
+        font-size: 0.8em;
+        font-weight: 100;
+    }
+}
+
+@media (max-width: 329px) {
+    header{
+        padding: 1em 0.1em;
+    }
+    nav a {
+        margin: 0 0.2em;
+    }
+}
+
