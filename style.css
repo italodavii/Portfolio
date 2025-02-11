@@ -30,6 +30,8 @@ header h1 span {
     font-family: fantasy;
     font-size: 0.2em;
     font-weight: 100;
+    white-space: nowrap;
+    display: inline-block;
 }
 
 nav{
