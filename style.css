@@ -17,7 +17,7 @@ header {
     background-color: #1e3a8a;
     color: #fff;
     width: 100%;
-    padding: 1em 0;
+    padding: 1em 0.7em;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -279,4 +279,30 @@ footer .contact a img{
 
 footer p{
     margin: 0.5em;
+}
+
+@media (max-width: 550px) {
+    .about-section {
+        flex-direction: column-reverse;
+    }
+
+    .about-section .content {
+        width: 100%;
+        flex: 1;
+    }
+
+    .about-section .image img {
+        width: 100%;
+        max-width: 200px;
+        border-radius: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+        line-height: 0.8;
+    }
+
+    header h1 span {
+        margin-top: 0;
+    }
 }
