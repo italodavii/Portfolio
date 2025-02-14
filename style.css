@@ -46,7 +46,7 @@ nav a {
     font-weight: 500;
     border: 0.1em solid #fff;
     padding: 0.2em 0.8em;
-    border-radius: 1em;
+    border-radius: 0.5em;
 }
 
 
@@ -100,6 +100,32 @@ nav a {
 }
 
 /*------------- Projects --------------*/
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 5px 0 20px 0;
+}
+
+.filtro {
+    padding: 5px 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #ddd;
+    border-radius: 5px;
+    font-weight: 100;
+    transition: 0.3s;
+}
+
+.filtro.ativo {
+    background-color: #4f46e5;
+    color: white;
+}
+
+.projeto {
+    display: none;
+}
+
 .title{
     text-align: center; 
     font-size: 2em; 
@@ -323,6 +349,13 @@ footer p{
     nav a {
         font-size: 0.8em;
         font-weight: 100;
+    }
+}
+
+@media (max-width: 385px) {
+    .filtro {
+        font-size: 0.6em;
+        padding: 5px 15px;
     }
 }
 

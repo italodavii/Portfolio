@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <title>Italo David - Portfólio</title>
 </head>
 <body>
@@ -27,22 +26,101 @@
             </div>
             
             <div class="image">
-                <img src="img/foto.jpg" alt="Foto de Italo David">
+                <img src="assets/foto.webp" alt="Foto de Italo David">
             </div>
         </section>
 
         <section id="projects">
-            <h2 class="title">Projetos Recentes</h2>
+            <h2 class="title">Sessão de Projetos</h2>
+
+            <div class="filtros">
+                <button class="filtro ativo" data-tipo="finalizado" onclick="filtrarProjetos('finalizado')">
+                    Finalizados (<span id="qtd-finalizado">0</span>)
+                </button>
+                <button class="filtro" data-tipo="desenvolvimento" onclick="filtrarProjetos('desenvolvimento')">
+                    Em desenvolvimento (<span id="qtd-desenvolvimento">0</span>)
+                </button>
+            </div>
+            
             <div class="projects">
 
+
+                <!--  FINALIZADOS -->
+
+                <!--Dicionario-->
+                <div class="project-card" data-tipo="finalizado">
+                    <img src="assets/project/dicionario.webp" alt="Dicionario">
+                    <h2>Dicionário Online de Inglês</h2>
+                    <p class="project-description">
+                        Dicionário de inglês: significado e uso da palavra.
+                    </p>
+                    <button class="show-more-btn" onclick="showModal('Dicionário Online de Inglês', 'Este projeto consiste em um dicionário online para consultar o significado e uso de palavras em inglês, com uma interface simples e eficiente.', 'assets/project/dicionario.webp', 'https://italodavii.github.io/Dicionario-Online-de-Ingles/')">Ver mais</button>
+                    <a href="https://italodavii.github.io/Dicionario-Online-de-Ingles/" target="_blank">Visitar página</a>
+                </div>
+                
+                <!-- Modal de descrição expandida com imagem e botão "Ver página" -->
+                <div id="description-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal()">&times;</span>
+                        <img id="modal-image" src="" alt="Imagem do Projeto" class="modal-image">
+                        <h2 id="modal-title"></h2>
+                        <p id="modal-description"></p>
+                        <a id="modal-link" href="#" target="_blank" class="modal-page-link">Visitar página</a>
+                    </div>
+                </div>
+
+                <!--Blog estatico-->
+                <div class="project-card" data-tipo="finalizado">
+                    <img src="assets/project/blog.webp" alt="Blog estático">
+                    <h2>Blog estático</h2>
+                    <p class="project-description">
+                        Blog simples, desenvolvimento acadêmico.
+                    </p>
+                    <button class="show-more-btn" onclick="showModal('Blog estático', 'Este blog estático foi desenvolvido como parte de um projeto acadêmico, com foco em estruturação básica de conteúdo e design responsivo.', 'assets/project/blog.webp', 'https://italodavii.github.io/Blog-estatico/')">Ver mais</button>
+                    <a href="https://italodavii.github.io/Blog-estatico/" target="_blank">Visitar página</a>
+                </div>
+                
+                <!-- Modal de descrição expandida com imagem e botão "Ver página" -->
+                <div id="description-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal()">&times;</span>
+                        <img id="modal-image" src="" alt="Imagem do Projeto" class="modal-image">
+                        <h2 id="modal-title"></h2>
+                        <p id="modal-description"></p>
+                        <a id="modal-link" href="#" target="_blank" class="modal-page-link">Visitar página</a>
+                    </div>
+                </div>
+
+                <!--Cotação-->
+                <div class="project-card" data-tipo="finalizado">
+                    <img src="assets/project/cotacao.webp" alt="Cotacao">
+                    <h2>Cotação Dólar e Euro</h2>
+                    <p class="project-description">
+                        Software que exibe em tempo real as cotações do dólar e euro. 
+                    </p>
+                    <button class="show-more-btn" onclick="showModal('Cotação do Dólar e Euro', 'Software que monitora em tempo real as cotações do dólar e euro em relação ao real, atualizando automaticamente a cada 30 segundos e exibindo data e hora no horário de Brasília em uma interface clara e prática.', 'assets/project/cotacao.webp', 'https://italodavii.github.io/cotacao-euro-dolar/')">Ver mais</button>
+                    <a href="https://italodavii.github.io/cotacao-euro-dolar/" target="_blank">Visitar página</a>
+                </div>
+                
+                <!-- Modal de descrição expandida com imagem e botão "Ver página" -->
+                <div id="description-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal()">&times;</span>
+                        <img id="modal-image" src="" alt="Imagem do Projeto" class="modal-image">
+                        <h2 id="modal-title"></h2>
+                        <p id="modal-description"></p>
+                        <a id="modal-link" href="#" target="_blank" class="modal-page-link">Visitar página</a>
+                    </div>
+                </div>
+
                 <!--Tela gov.br-->
-                <div class="project-card">
-                    <img src="img/project/tela gov.png" alt="Tela de login gov.br">
+                <div class="project-card" data-tipo="finalizado">
+                    <img src="assets/project/tela gov.webp" alt="Tela de login gov.br">
                     <h2>Tela de login gov.br</h2>
                     <p class="project-description">
                         Tela de login inspirada na oficial do gov.br.
                     </p>
-                    <button class="show-more-btn" onclick="showModal('Tela de login gov.br', 'Este projeto é uma recriação de uma tela de login inspirada na oficial do gov.br, com design simples e funcional.', 'img/project/tela gov.png', 'https://italodavii.github.io/gov.br-tela-de-login/')">Ver mais</button>
+                    <button class="show-more-btn" onclick="showModal('Tela de login gov.br', 'Este projeto é uma recriação de uma tela de login inspirada na oficial do gov.br, com design simples e funcional.', 'assets/project/tela gov.webp', 'https://italodavii.github.io/gov.br-tela-de-login/')">Ver mais</button>
                     <a href="https://italodavii.github.io/gov.br-tela-de-login/" target="_blank">Visitar página</a>
                 </div>
                 
@@ -59,13 +137,13 @@
                 
                 
                 <!--Tela de login-->
-                <div class="project-card">
-                    <img src="img/project/tela login.png" alt="Tela de login">
+                <div class="project-card" data-tipo="finalizado">
+                    <img src="assets/project/tela login.webp" alt="Tela de login">
                     <h2>Tela de login</h2>
                     <p class="project-description">
                         Tela de login com formulário de cadastro integrado.
                     </p>
-                    <button class="show-more-btn" onclick="showModal('Tela de login', 'Esse projeto oferece uma interface completa de login com formulário de cadastro, campos de validação e design responsivo.', 'img/project/tela login.png', 'https://italodavii.github.io/tela-de-login-com-cadastro/')">Ver mais</button>
+                    <button class="show-more-btn" onclick="showModal('Tela de login', 'Esse projeto oferece uma interface completa de login com formulário de cadastro, campos de validação e design responsivo.', 'assets/project/tela login.webp', 'https://italodavii.github.io/tela-de-login-com-cadastro/')">Ver mais</button>
                     <a href="https://italodavii.github.io/tela-de-login-com-cadastro/" target="_blank">Visitar página</a>
                 </div>
                 
@@ -82,13 +160,13 @@
                 
 
                 <!--Landing page-->
-                <div class="project-card">
-                    <img src="img/project/sevem.png" alt="Landing Page">
+                <div class="project-card" data-tipo="finalizado">
+                    <img src="assets/project/sevem.webp" alt="Landing Page">
                     <h2>Landing Page</h2>
                     <p class="project-description">
                         Landing page para ecommerce fictício.
                     </p>
-                    <button class="show-more-btn" onclick="showModal('Landing Page', 'Esta landing page foi criada para um ecommerce fictício, com foco em uma interface limpa e atraente para atrair clientes.', 'img/project/sevem.png', 'https://italodavii.github.io/Landing-Page-Sevem-Shopping/')">Ver mais</button>
+                    <button class="show-more-btn" onclick="showModal('Landing Page', 'Esta landing page foi criada para um ecommerce fictício, com foco em uma interface limpa e atraente para atrair clientes.', 'assets/project/sevem.webp', 'https://italodavii.github.io/Landing-Page-Sevem-Shopping/')">Ver mais</button>
                     <a href="https://italodavii.github.io/Landing-Page-Sevem-Shopping/" target="_blank">Ver página</a>
                 </div>
                 
@@ -102,85 +180,15 @@
                         <a id="modal-link" href="#" target="_blank" class="modal-page-link">Visitar página</a>
                     </div>
                 </div>
-                
-
-                <!--Sense financas-->
-                <div class="project-card">
-                    <img src="img/project/sense.png" alt="Sense Finanças">
-                    <h2>Sense Finanças</h2>
-                    <p class="project-description">
-                        Projeto acadêmico de finanças sem BD.
-                    </p>
-                    <button class="show-more-btn" onclick="showModal('Sense Finanças', 'Sense Finanças é um projeto acadêmico que visa o gerenciamento de finanças pessoais, sem a utilização de banco de dados, com foco em funcionalidades básicas para controle financeiro.', 'img/project/sense.png', 'https://italodavii.github.io/Sense-Financas/')">Ver mais</button>
-                    <a href="https://italodavii.github.io/Sense-Financas/" target="_blank">Visitar página</a>
-                </div>
-                
-                <!-- Modal de descrição expandida com imagem e botão "Ver página" -->
-                <div id="description-modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close-btn" onclick="closeModal()">&times;</span>
-                        <img id="modal-image" src="" alt="Imagem do Projeto" class="modal-image">
-                        <h2 id="modal-title"></h2>
-                        <p id="modal-description"></p>
-                        <a id="modal-link" href="#" target="_blank" class="modal-page-link">Visitar página</a>
-                    </div>
-                </div>
-                
-
-                <!--Tier - cashback-->
-                <div class="project-card">
-                    <img src="img/project/tier.png" alt="Tier - cashback">
-                    <h2>Tier - cashback</h2>
-                    <p class="project-description">
-                        Inspiração pessoal, login de cashback.
-                    </p>
-                    <button class="show-more-btn" onclick="showModal('Tier - cashback', 'Este projeto foi inspirado por uma ideia pessoal de criar um sistema de login voltado para programas de cashback, com design simples e funcional.', 'img/project/tier.png', 'https://italodavii.github.io/Tier-cashback/')">Ver mais</button>
-                    <a href="https://italodavii.github.io/Tier-cashback/" target="_blank">Visitar página</a>
-                </div>
-                
-                <!-- Modal de descrição expandida com imagem e botão "Ver página" -->
-                <div id="description-modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close-btn" onclick="closeModal()">&times;</span>
-                        <img id="modal-image" src="" alt="Imagem do Projeto" class="modal-image">
-                        <h2 id="modal-title"></h2>
-                        <p id="modal-description"></p>
-                        <a id="modal-link" href="#" target="_blank" class="modal-page-link">Visitar página</a>
-                    </div>
-                </div>
-                
-
-                <!--Blog estatico-->
-                <div class="project-card">
-                    <img src="img/project/blog.png" alt="Blog estático">
-                    <h2>Blog estático</h2>
-                    <p class="project-description">
-                        Blog simples, desenvolvimento acadêmico.
-                    </p>
-                    <button class="show-more-btn" onclick="showModal('Blog estático', 'Este blog estático foi desenvolvido como parte de um projeto acadêmico, com foco em estruturação básica de conteúdo e design responsivo.', 'img/project/blog.png', 'https://italodavii.github.io/Blog-estatico/')">Ver mais</button>
-                    <a href="https://italodavii.github.io/Blog-estatico/" target="_blank">Visitar página</a>
-                </div>
-                
-                <!-- Modal de descrição expandida com imagem e botão "Ver página" -->
-                <div id="description-modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close-btn" onclick="closeModal()">&times;</span>
-                        <img id="modal-image" src="" alt="Imagem do Projeto" class="modal-image">
-                        <h2 id="modal-title"></h2>
-                        <p id="modal-description"></p>
-                        <a id="modal-link" href="#" target="_blank" class="modal-page-link">Visitar página</a>
-                    </div>
-                </div>
-                
 
                 <!--FlexBox - RPG-->
-                <div class="project-card">
-                    <img src="img/project/FlexBox - RPG.png" alt="FlexBox-RPG">
+                <div class="project-card" data-tipo="finalizado">
+                    <img src="assets/project/FlexBox - RPG.webp" alt="FlexBox-RPG">
                     <h2>FlexBox - RPG</h2>
                     <p class="project-description">
                         Projeto de tela de RPG com breve história.
                     </p>
-                    <button class="show-more-btn" onclick="showModal('FlexBox - RPG', 'Este projeto consiste em uma tela de RPG criada utilizando Flexbox, com uma breve história sobre o mundo fictício e os personagens principais.', 'img/project/FlexBox - RPG.png', 'https://italodavii.github.io/Flexbox-RPG/')">Ver mais</button>
+                    <button class="show-more-btn" onclick="showModal('FlexBox - RPG', 'Este projeto consiste em uma tela de RPG criada utilizando Flexbox, com uma breve história sobre o mundo fictício e os personagens principais.', 'assets/project/FlexBox - RPG.webp', 'https://italodavii.github.io/Flexbox-RPG/')">Ver mais</button>
                     <a href="https://italodavii.github.io/Flexbox-RPG/" target="_blank">Visitar página</a>
                 </div>
                 
@@ -196,14 +204,64 @@
                 </div>
                 
 
-                <!--NxPlay-->
-                <div class="project-card">
-                    <img src="img/project/NxPlay.png" alt="NxPaly">
+
+
+                <!-- EM DESENVOLVIMENTO -->
+
+
+
+                <!--Sense Finanças-->
+                <div class="project-card" data-tipo="desenvolvimento">
+                    <img src="assets/project/sense.webp" alt="Sense Finanças">
+                    <h2>Sense Finanças</h2>
+                    <p class="project-description">
+                        Projeto acadêmico de finanças sem BD.
+                    </p>
+                    <button class="show-more-btn" onclick="showModal('Sense Finanças', 'Sense Finanças é um projeto acadêmico que visa o gerenciamento de finanças pessoais, sem a utilização de banco de dados, com foco em funcionalidades básicas para controle financeiro.', 'assets/project/sense.webp', 'https://italodavii.github.io/Sense-Financas/')">Ver mais</button>
+                    <a href="https://italodavii.github.io/Sense-Financas/" target="_blank">Visitar página</a>
+                </div>
+                
+                <!-- Modal de descrição expandida com imagem e botão "Ver página" -->
+                <div id="description-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal()">&times;</span>
+                        <img id="modal-image" src="" alt="Imagem do Projeto" class="modal-image">
+                        <h2 id="modal-title"></h2>
+                        <p id="modal-description"></p>
+                        <a id="modal-link" href="#" target="_blank" class="modal-page-link">Visitar página</a>
+                    </div>
+                </div>
+                
+                <!--Tier - Cashback-->
+                <div class="project-card" data-tipo="desenvolvimento">
+                    <img src="assets/project/tier.webp" alt="Tier - cashback">
+                    <h2>Tier - cashback</h2>
+                    <p class="project-description">
+                        Inspiração pessoal, login de cashback.
+                    </p>
+                    <button class="show-more-btn" onclick="showModal('Tier - cashback', 'Este projeto foi inspirado por uma ideia pessoal de criar um sistema de login voltado para programas de cashback, com design simples e funcional.', 'assets/project/tier.webp', 'https://italodavii.github.io/Tier-cashback/')">Ver mais</button>
+                    <a href="https://italodavii.github.io/Tier-cashback/" target="_blank">Visitar página</a>
+                </div>
+                
+                <!-- Modal de descrição expandida com imagem e botão "Ver página" -->
+                <div id="description-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close-btn" onclick="closeModal()">&times;</span>
+                        <img id="modal-image" src="" alt="Imagem do Projeto" class="modal-image">
+                        <h2 id="modal-title"></h2>
+                        <p id="modal-description"></p>
+                        <a id="modal-link" href="#" target="_blank" class="modal-page-link">Visitar página</a>
+                    </div>
+                </div>
+                
+                <!--NxPlay - Filmes-->
+                <div class="project-card" data-tipo="desenvolvimento">
+                    <img src="assets/project/NxPlay.webp" alt="NxPaly">
                     <h2>NxPlay - filmes</h2>
                     <p class="project-description">
                         Software de filmes, em processo de desenvolvimento.
                     </p>
-                    <button class="show-more-btn" onclick="showModal('NxPlay - filmes', 'NxPlay é um software em desenvolvimento para streaming de filmes, com uma interface simples e intuitiva, visando facilitar a navegação e busca de conteúdo.', 'img/project/NxPlay.png', 'https://italodavii.github.io/NxPlay-Inspired/')">Ver mais</button>
+                    <button class="show-more-btn" onclick="showModal('NxPlay - filmes', 'NxPlay é um software em desenvolvimento para streaming de filmes, com uma interface simples e intuitiva, visando facilitar a navegação e busca de conteúdo.', 'assets/project/NxPlay.webp', 'https://italodavii.github.io/NxPlay-Inspired/')">Ver mais</button>
                     <a href="https://italodavii.github.io/NxPlay-Inspired/" target="_blank">Visitar página</a>
                 </div>
                 
@@ -217,53 +275,6 @@
                         <a id="modal-link" href="#" target="_blank" class="modal-page-link">Visitar página</a>
                     </div>
                 </div>
-                
-
-                <!--Dicionario-->
-                <div class="project-card">
-                    <img src="img/project/dicionario.png" alt="Dicionario">
-                    <h2>Dicionário Online de Inglês</h2>
-                    <p class="project-description">
-                        Dicionário de inglês: significado e uso da palavra.
-                    </p>
-                    <button class="show-more-btn" onclick="showModal('Dicionário Online de Inglês', 'Este projeto consiste em um dicionário online para consultar o significado e uso de palavras em inglês, com uma interface simples e eficiente.', 'img/project/dicionario.png', 'https://italodavii.github.io/Dicionario-Online-de-Ingles/')">Ver mais</button>
-                    <a href="https://italodavii.github.io/Dicionario-Online-de-Ingles/" target="_blank">Visitar página</a>
-                </div>
-                
-                <!-- Modal de descrição expandida com imagem e botão "Ver página" -->
-                <div id="description-modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close-btn" onclick="closeModal()">&times;</span>
-                        <img id="modal-image" src="" alt="Imagem do Projeto" class="modal-image">
-                        <h2 id="modal-title"></h2>
-                        <p id="modal-description"></p>
-                        <a id="modal-link" href="#" target="_blank" class="modal-page-link">Visitar página</a>
-                    </div>
-                </div>
-
-
-                <!--Cotação-->
-                <div class="project-card">
-                    <img src="img/project/cotacao.png" alt="Cotacao">
-                    <h2>Cotação Dólar e Euro</h2>
-                    <p class="project-description">
-                        Software que exibe em tempo real as cotações do dólar e euro. 
-                    </p>
-                    <button class="show-more-btn" onclick="showModal('Cotação do Dólar e Euro', 'Software que monitora em tempo real as cotações do dólar e euro em relação ao real, atualizando automaticamente a cada 30 segundos e exibindo data e hora no horário de Brasília em uma interface clara e prática.', 'img/project/cotacao.png', 'https://italodavii.github.io/cotacao-euro-dolar/')">Ver mais</button>
-                    <a href="https://italodavii.github.io/cotacao-euro-dolar/" target="_blank">Visitar página</a>
-                </div>
-                
-                <!-- Modal de descrição expandida com imagem e botão "Ver página" -->
-                <div id="description-modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close-btn" onclick="closeModal()">&times;</span>
-                        <img id="modal-image" src="" alt="Imagem do Projeto" class="modal-image">
-                        <h2 id="modal-title"></h2>
-                        <p id="modal-description"></p>
-                        <a id="modal-link" href="#" target="_blank" class="modal-page-link">Visitar página</a>
-                    </div>
-                </div>
-                
 
             </div>
         </section>
@@ -272,11 +283,12 @@
     <footer id="contact">
         <h2>Entre em contato:</h2>
         <div class="contact">
-            <a href="mailto:italodavid6144@gmail.com"><img src="img/icons/email.png">Email</a> |
-            <a href="https://github.com/italodavii" target="_blank"><img src="img/icons/github.png">GitHub</a> |
-            <a href="https://www.linkedin.com/in/ítalo-david-3abb6823b/" target="_blank"><img src="img/icons/linkedin.png">LinkedIn</a>
+            <a href="mailto:italodavid6144@gmail.com"><img src="assets/icons/email.webp">Email</a> |
+            <a href="https://github.com/italodavii" target="_blank"><img src="assets/icons/github.webp">GitHub</a> |
+            <a href="https://www.linkedin.com/in/ítalo-david-3abb6823b/" target="_blank"><img src="assets/icons/linkedin.webp">LinkedIn</a>
         </div>
         <p>Desenvolvido por Ítalo David © 2024</p>
     </footer>
 </body>
+<script src="script.js"></script>
 </html>
